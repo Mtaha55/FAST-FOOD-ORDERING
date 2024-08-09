@@ -1,14 +1,14 @@
 // src/App.js
 import React, { useState } from 'react';
-import Navbar from './components/Navbar';
-import Menu from './components/Menu';
-import Order from './components/Order';
-import Cart from './components/Cart';
-import ThemeToggle from './components/ThemeToggle';
-import './styles.css';
 import burgerImg from './assets/burger.png';
 import friesImg from './assets/fries.png';
 import sodaImg from './assets/soda.png';
+import Cart from './components/Cart';
+import Menu from './components/Menu';
+import Navbar from './components/Navbar';
+import Order from './components/Order';
+import ThemeToggle from './components/ThemeToggle';
+import './styles.css';
 
 const App = () => {
   const [order, setOrder] = useState([]);
