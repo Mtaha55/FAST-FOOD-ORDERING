@@ -2,7 +2,7 @@
 import React from 'react';
 import './Cart.css';
 
-const Cart = ({ order }) => {
+const Cart = ({ order, updateQuantity, removeItem }) => {
   const calculateTotal = () => {
     return order.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
   };
@@ -18,8 +18,20 @@ const Cart = ({ order }) => {
             {order.map((item) => (
               <li key={item.id}>
                 <span>{item.name}</span>
-                <span>{item.quantity} x {item.price.toFixed(2)} kr</span>
+                <div className="cart-item-controls">
+                  <button onClick={() => updateQuantity(item.id, -1)} disabled={item.quantity === 1}>
+                    -
+                  </button>
+                  <span>{item.quantity}</span>
+                  <button onClick={() => updateQuantity(item.id, 1)}>
+                    +
+                  </button>
+                </div>
+                <span>{item.price.toFixed(2)} kr each</span>
                 <span>{(item.price * item.quantity).toFixed(2)} kr</span>
+                <button className="remove-item" onClick={() => removeItem(item.id)}>
+                  Remove
+                </button>
               </li>
             ))}
           </ul>
