@@ -1,0 +1,88 @@
+/* src/styles.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.menu, .order {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.menu-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.image-stack {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.food-image {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+button {
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+/* src/styles.css */
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.menu img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.menu h3 {
+  margin: 0;
+  flex: 1;
+}
+
+.menu p {
+  margin: 0 10px;
+}
+
+.menu button {
+  padding: 10px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu button:hover {
+  background-color: #e64a19;
+}
